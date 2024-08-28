@@ -1,7 +1,7 @@
 import { View, Text, TextInput, StyleSheet } from 'react-native'
 import {Ionicons} from '@expo/vector-icons'
 
-export default function Search() {
+export function Search() {
   return (
     //eu não sei porque e não quero saber, mas o tailwind 'mt-<valor>' funciona as vezes e as vezes não, então fiz um StyleSheet padrão mesmo.
     // <View className='w-full h-10 items-center rounded-xl mt-1.5 bg-gray-300 flex-row px-2'>

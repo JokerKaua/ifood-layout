@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import PagerView from 'react-native-pager-view';
 
 
-export default function Banner() {
+export function Banner() {
     return (
         <View style={styles.container}>
             {/* Esse page view não funciona muito bem com o tailwind */}
