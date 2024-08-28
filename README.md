@@ -29,6 +29,8 @@ Imagem de referência:
 - [Node@21.2.0/npm@10.8.2](nodejs.org/)
 - [NativeWind@4.0.1](https://www.nativewind.dev/v4/overview)
    -  [TailwindCSS@3.4.10](https://tailwindcss.com)
+  > O NativeWind tem alguns bugs e não funciona direito. <br>
+  > Ao longo do projeto percebe-se uma mistura entre o StyleSheet padrão do React-Native e o Tailwind.
 
 ## Instalação e execução
 
@@ -46,25 +48,30 @@ npx expo start
 ## Desenvolvimento 
 
 - App
-  - [ ] Estrutura de arquivos
+  - [x] Estrutura de arquivos
     > Organização dos arquivos e códigos <br>
   - [x] Dependências
     > Pode aumentar
 - Expo router 
     > precisa instalar e configurar pastas e estrutura do app <br>
   - [ ] _layout
+    - [x] Parcialmente
   - [ ] Tabs
+    - [x] Parcialmente
   - [ ] Screens
   - [ ] Header
   - [ ] Stack
 - Components
   - [ ] Card
-  - [ ] SearchBar
+  - [x] Search
   - [ ] Header
+    > Será feito dinamicamente (expo router)
+  - [ ] Sections (Dinamicas)
 - Assets
   - [ ] Imagens
-  - [ ] Ícones
-  - [ ] Fontes
+    - [x] Banners 
+  - [x] Ícones
+  - [x] Fontes
 - 
 
 
