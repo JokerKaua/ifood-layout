@@ -1,50 +1,73 @@
-# Welcome to your Expo app 👋
+# Atividade Design de Telas - Layout IFOOD
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+- [Atividade Design de Telas - Layout IFOOD](#atividade-design-de-telas---layout-ifood)
+  - [Sobre](#sobre)
+  - [Tecnologias](#tecnologias)
+  - [Instalação e execução](#instalação-e-execução)
+  - [Desenvolvimento](#desenvolvimento)
 
-## Get started
-
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+<br><br>
 
 ```bash
-npm run reset-project
+git clone https://github.com/JokerKaua/aula-react-native.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Sobre
 
-## Learn more
+Atividade para copiar o layout de algum aplicativo. <br> 
+> **Escolhi o ifood**
+> 
+Help vídeo: [*Fazendo layout do ifood*](https://www.youtube.com/watch?v=aABUs_L4AZg) <br>
+Imagem de referência: 
+![Imagem de algumas telas do ifood](layoutReference.png)
 
-To learn more about developing your project with Expo, look at the following resources:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Tecnologias
 
-## Join the community
+- [React-native@0.74.5/React@18.2.0](https://reactnative.dev)
+- [Expo@~51.0.28](https://expo.dev)
+- [Node@21.2.0/npm@10.8.2](nodejs.org/)
+- [NativeWind@4.0.1](https://www.nativewind.dev/v4/overview)
+   -  [TailwindCSS@3.4.10](https://tailwindcss.com)
 
-Join our community of developers creating universal apps.
+## Instalação e execução
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Para instalar as dependências:
+```bash
+npm install
+```
+
+- Para rodar o expo:
+```bash
+npx expo start
+```
+
+
+## Desenvolvimento 
+
+- App
+  - [ ] Estrutura de arquivos
+    > Organização dos arquivos e códigos <br>
+  - [x] Dependências
+    > Pode aumentar
+- Expo router 
+    > precisa instalar e configurar pastas e estrutura do app <br>
+  - [ ] _layout
+  - [ ] Tabs
+  - [ ] Screens
+  - [ ] Header
+  - [ ] Stack
+- Components
+  - [ ] Card
+  - [ ] SearchBar
+  - [ ] Header
+- Assets
+  - [ ] Imagens
+  - [ ] Ícones
+  - [ ] Fontes
+- 
+
+
+<br><br><br><br>
+> Autor: *Kauã Felipe Martins* <br>
+    
