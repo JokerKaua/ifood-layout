@@ -1,5 +1,4 @@
-import { Component } from 'react';
-import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 
 
 interface Props {
@@ -20,13 +19,6 @@ export function Section({ title, label, size, action }: Props) {
             <Pressable onPress={action} className=''>
                 <Text className='text-green-700'>{label}</Text>
             </Pressable>
-        </View>
-        
-    )
+        </View>   
+    );
 }
-
-const styles = StyleSheet.create({
-    container: {
-       
-    }
-})

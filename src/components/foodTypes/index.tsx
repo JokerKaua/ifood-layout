@@ -1,7 +1,7 @@
 import { View, Text, ScrollView } from 'react-native'
 import FoodCard from './foodCard'
 
-export default function FoodType() {
+export function FoodType() {
     return (
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}
             className='w-full my-4'>
