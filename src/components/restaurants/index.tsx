@@ -9,14 +9,14 @@ export interface RestaurantsProps {
     image: string
 }
 
-export function Restaurants() {
+export function Restaurants({urlFetch}:{urlFetch: string}) {
 
     const [restaurants, setRestaurants] = useState([])
 
     useEffect(()=>{
         //Pegar restaurantes do db.json, simulando uma API
         async function getRestaurants() {
-            const response = await fetch('http://192.168.15.16:3000/restaurants');
+            const response = await fetch(urlFetch);
             const data = await response.json();
             // console.log(data);
             setRestaurants(data);
@@ -28,21 +28,21 @@ export function Restaurants() {
 
   return (
       <FlatList
-        className='w-full'
-        horizontal={true}
+        horizontal={false}
         data={restaurants}
+        numColumns={2}
         renderItem={( { item }) => <RestaurantCard item={item}/>}
         showsHorizontalScrollIndicator={false}
-        // columnWrapperStyle={{
-        //     justifyContent: 'space-between',
-        //     gap: 20,
-        //     alignItems: 'flex-start'
-        // }}
+        columnWrapperStyle={{
+            justifyContent: 'space-between',
+            gap: 16,
+            alignItems: 'flex-start'
+        }}
         contentContainerStyle={{
-            gap: 10,
+            gap: 12,
             paddingHorizontal: 16,
-            justifyContent: 'flex-start',
-            alignItems: "flex-start"
+            justifyContent: 'center',
+            alignItems: "center"
         }}
       />
         

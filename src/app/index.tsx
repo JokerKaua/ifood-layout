@@ -45,7 +45,7 @@ export default function Index() {
           size="text-2xl"
         />
 
-        <Restaurants />
+        <Restaurants urlFetch="http://192.168.15.53:3000/restaurants"/>
         
       </View>
     </ScrollView>
