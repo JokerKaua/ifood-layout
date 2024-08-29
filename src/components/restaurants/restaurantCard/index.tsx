@@ -5,8 +5,8 @@ import { FontAwesome, Ionicons } from '@expo/vector-icons'
 
 
 export default function RestaurantCard({ item }: { item: RestaurantsProps }) {
+    
     return (
-
         <Pressable style={{
             marginVertical: 4,
             justifyContent: 'center',
@@ -14,12 +14,19 @@ export default function RestaurantCard({ item }: { item: RestaurantsProps }) {
             backgroundColor: '#ddd',
             borderRadius: 16
         }}>
+            <View style={{
+                width: 140,
+                height: 120,
+                backgroundColor: 'black',
+                borderRadius: 16,
+            }}>
             <Image source={{ uri: item.image }} style={{
                 width: 140,
                 height: 120,
                 resizeMode: 'stretch',
                 borderRadius: 16,
             }} />
+            </View>
             <FontAwesome name='circle' size={38} color={'#aaa'} style={{
                 position: 'absolute',
                 bottom: 26,
@@ -30,7 +37,6 @@ export default function RestaurantCard({ item }: { item: RestaurantsProps }) {
                 color: '#ddd'
             }}/>
             <Text className='font-semibold text-xl mt-5'>{item.name}</Text>
-            
         </Pressable>
 
     )

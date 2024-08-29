@@ -15,9 +15,19 @@ export default function RootLayout() {
         borderColor: '#fff',
         justifyContent: 'space-between'
       }
-    }
-    }>
-      <Tabs.Screen name='index' options={{ tabBarIcon: () => { return <Ionicons name='home' size={20} color={'#000'} /> } }} />
+    }}>
+
+      <Tabs.Screen name='index' options={{ 
+        tabBarIcon: () => { return <Ionicons name='home' size={20} color={'#000'} /> },
+        tabBarInactiveBackgroundColor: '#aaa'
+        
+        }}/>
+      <Tabs.Screen name='(tabs)' options={{ 
+        tabBarIcon: ()=> {return <Ionicons name='cafe' size={20} color={'000'}/>},
+        tabBarInactiveBackgroundColor: '#aaa'
+        
+        
+        }}/>
     </Tabs>
 
   )

@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useEffect, useState } from 'react'
-import { View, Text, FlatList } from 'react-native'
+import { View, Text, FlatList, ScrollView, StyleSheet } from 'react-native'
 import RestaurantCard from './restaurantCard';
 
 export interface RestaurantsProps {
@@ -9,11 +9,11 @@ export interface RestaurantsProps {
     image: string
 }
 
-export function Restaurants({urlFetch}:{urlFetch: string}) {
+export function Restaurants({ urlFetch }: { urlFetch: string }) {
 
-    const [restaurants, setRestaurants] = useState([])
+    const [restaurants, setRestaurants] = useState<RestaurantsProps[]>([])
 
-    useEffect(()=>{
+    useEffect(() => {
         //Pegar restaurantes do db.json, simulando uma API
         async function getRestaurants() {
             const response = await fetch(urlFetch);
@@ -23,28 +23,32 @@ export function Restaurants({urlFetch}:{urlFetch: string}) {
         }
 
         getRestaurants();
-    }, []);
+    }, [urlFetch]);
 
 
-  return (
-      <FlatList
-        horizontal={false}
-        data={restaurants}
-        numColumns={2}
-        renderItem={( { item }) => <RestaurantCard item={item}/>}
-        showsHorizontalScrollIndicator={false}
-        columnWrapperStyle={{
-            justifyContent: 'space-between',
-            gap: 16,
-            alignItems: 'flex-start'
-        }}
-        contentContainerStyle={{
-            gap: 12,
-            paddingHorizontal: 16,
-            justifyContent: 'center',
-            alignItems: "center"
-        }}
-      />
-        
-  )
+
+    return (
+        <View>
+            
+
+            <FlatList
+                horizontal={false}
+                data={restaurants}
+                numColumns={2}
+                renderItem={({ item }) => <RestaurantCard item={item} />}
+                showsHorizontalScrollIndicator={false}
+                columnWrapperStyle={{
+                    justifyContent: 'space-between',
+                    gap: 16,
+                    alignItems: 'flex-start'
+                }}
+                contentContainerStyle={{
+                    gap: 12,
+                    paddingHorizontal: 16,
+                    justifyContent: 'center',
+                    alignItems: "center"
+                }}
+            />
+        </View>
+    )
 }
