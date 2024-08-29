@@ -13,7 +13,7 @@ interface Props {
 export function Section({ title, label, size, action }: Props) {
     return (
         //                                              justify não estava pegando, só reiniciei o expo e funcionou :)
-        <View className='w-full flex flex-row items-center justify-between px-2 my-6'>
+        <View className='w-full flex flex-row items-center justify-between px-2 my-1'>
             <Text className={`${size} font-semibold my-2`} >
                 {title}
             </Text>

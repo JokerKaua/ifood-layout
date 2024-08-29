@@ -71,6 +71,8 @@ npx expo start
   - [ ] Imagens
     - [x] Banners 
   - [x] Ícones
+    > Utilizando o expo-vector-icons<br>
+    > [Link para pesquisa de ícones](https://icons.expo.fyi/Index) 
   - [x] Fontes
 - 
 

@@ -7,6 +7,7 @@ import Constants from 'expo-constants';
 import { Search } from "../components/search";
 import { Banner } from "../components/banner";
 import { Section } from "../components/section";
+import FoodType from "../components/foodTypes";
 
 // Pegar tamanho da barra de notificações do dispositivo (ajuda muito)
 const heighStatusBar = Constants.statusBarHeight;
@@ -31,6 +32,8 @@ export default function Index() {
         <Search />
 
         <Banner />
+        
+        <FoodType/>
 
         <Section
           title="Comidas em altas"
@@ -40,6 +43,7 @@ export default function Index() {
           }
           size="text-2xl"
         />
+
 
       </View>
     </ScrollView>
