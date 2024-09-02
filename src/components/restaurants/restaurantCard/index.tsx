@@ -4,10 +4,13 @@ import { RestaurantsProps } from '..'
 import { FontAwesome, Ionicons } from '@expo/vector-icons'
 
 
+
 export default function RestaurantCard({ item }: { item: RestaurantsProps }) {
 
     const width = 140;
     const height = 100;
+
+    const Logo =  ''
 
     return (
         <Pressable style={{
@@ -25,7 +28,7 @@ export default function RestaurantCard({ item }: { item: RestaurantsProps }) {
                 backgroundColor: 'black',
                 borderRadius: 16,
             }}>
-                <Image source={{ uri: item.image }} style={{
+                <Image source={{uri: Logo}} style={{
                     width: width,
                     height: height,
                     resizeMode: 'stretch',

@@ -11,7 +11,7 @@ export function FoodType() {
                     Fazer um request pelo db.json
                      - FlatList
                 */}
-                <FoodCard name='BENTO' image={require(`@/src/assets/foodTypes/bento.png`)} />
+                <FoodCard name='BENTOS' image={require(`@/src/assets/foodTypes/bento.png`)} />
                 <FoodCard name='BURGUER' image={require(`@/src/assets/foodTypes/burguer.png`)} />
                 <FoodCard name='SUSHI' image={require(`@/src/assets/foodTypes/sushi.png`)} />
                 <FoodCard name='FRIED CHICKEN' image={require(`@/src/assets/foodTypes/friedchicken.png`)} />

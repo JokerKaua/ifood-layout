@@ -28,6 +28,7 @@
     "expo-web-browser": "~13.0.3",
     "json-server": "^1.0.0-beta.2",
     "nativewind": "4.0.1",
+    "npx": "^10.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.5",
