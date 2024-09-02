@@ -26,7 +26,7 @@ export function Search() {
       {/* Fanzedo essa operação, o Pressable só vai renderizar/carregar caso haja algum texto na barra de pesquisa*/}
       {search.length > 0 && (
 
-        <Pressable className='bg-black absolute right-0 p-2 pl-3 py-3 rounded-xl'
+        <Pressable className='bg-transparent absolute right-0 p-2 pl-3 py-3 rounded-xl'
           onPress={clearSearch}
         >
           <Entypo name='cross' size={18} color={'#888'} />

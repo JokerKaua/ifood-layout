@@ -44,10 +44,18 @@ export default function Index() {
           }
           size="text-2xl"
         />
+        <Restaurants urlFetch="http://192.168.15.16:3000/restaurants" />
 
-        <Restaurants urlFetch="http://192.168.56.1:3000/restaurants"/>
-      
-        
+        <Section
+          title="Comdias em alta"
+          label="vejda todas"
+          action={
+            () => { console.log(`CLICOU EM VEJA TODAS`) }
+          }
+          size="text-xl"
+        />
+
+
       </View>
     </ScrollView>
   );

@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useEffect, useState } from 'react'
-import { View, Text, FlatList, ScrollView, StyleSheet } from 'react-native'
+import { View, Text, FlatList, ScrollView, StyleSheet, SectionList } from 'react-native'
 import RestaurantCard from './restaurantCard';
 
 export interface RestaurantsProps {
@@ -29,22 +29,13 @@ export function Restaurants({ urlFetch }: { urlFetch: string }) {
 
     return (
         <View>
-            
-
             <FlatList
-                horizontal={false}
+                horizontal={true}
                 data={restaurants}
-                numColumns={2}
                 renderItem={({ item }) => <RestaurantCard item={item} />}
                 showsHorizontalScrollIndicator={false}
-                columnWrapperStyle={{
-                    justifyContent: 'space-between',
-                    gap: 16,
-                    alignItems: 'flex-start'
-                }}
                 contentContainerStyle={{
                     gap: 12,
-                    paddingHorizontal: 16,
                     justifyContent: 'center',
                     alignItems: "center"
                 }}
