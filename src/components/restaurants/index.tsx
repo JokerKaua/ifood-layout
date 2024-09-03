@@ -15,27 +15,29 @@ export function Restaurants({ urlFetch }: { urlFetch: string }) {
     const [restaurants, setRestaurants] = useState<RestaurantsProps[]>([])
 
     useEffect(() => {
-        //Pegar restaurantes do db.json, simulando uma API
-        // async function getRestaurants() {
-        //     const response = await fetch(urlFetch);
-        //     const data = await response.json();
-        //     // console.log(data);
-        //     setRestaurants(data);    
-        // }
-        // Tirar o comentário caso estiver usando o json-server
-        // getRestaurants();
-
+        
+        /**
+         * Caso queira usar o json-server, tire o código abaixo dos comentários.
+         * Não esqueça de arrumar o ip no componente Restaurant em `@/src/app/index.tsx`
+        */
+       
+       //Pegar restaurantes do db.json, simulando uma API
+       async function getRestaurants() {
+            const response = await fetch(urlFetch);
+            const data = await response.json();
+            // console.log(data);
+            setRestaurants(data);    
+        }
+        getRestaurants();
 
         async function getRestaurantsJson() {
             // console.log(data);
             setRestaurants(restaurantesJson.restaurants); 
-
             console.log(restaurants);
-            
         }
-
         getRestaurantsJson()
-    }, []);
+        
+    }, [urlFetch]);
 
     return (
         <View>

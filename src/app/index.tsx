@@ -9,6 +9,7 @@ import { Banner } from "../components/banner";
 import { Section } from "../components/section";
 import { FoodType } from "../components/foodTypes";
 import { Restaurants } from "../components/restaurants";
+import { Foods } from "../components/foods";
 
 // Pegar tamanho da barra de notificações do dispositivo (ajuda muito)
 const heighStatusBar = Constants.statusBarHeight;
@@ -44,7 +45,11 @@ export default function Index() {
           }
           size="text-2xl"
         />
-        <Restaurants urlFetch="http:/192.168.56.1:3000/restaurants" />
+        
+        {/**
+         * Se for rodar o json-server, coloque o ipv4 da máquina como parâmetro
+         */}
+        <Restaurants urlFetch="http:/192.168.15.16:3000/restaurants" />
 
         <Section
           title="Comdias em alta"
@@ -54,7 +59,7 @@ export default function Index() {
           }
           size="text-xl"
         />
-
+        <Foods urlFetch="http:/192.168.15.16:3000/foods" />
 
       </View>
     </ScrollView>

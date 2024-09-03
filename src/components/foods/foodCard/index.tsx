@@ -1,11 +1,11 @@
 import { View, Text, Pressable, Image } from 'react-native'
 
-import { RestaurantsProps } from '..'
+import { FoodProps } from '..'
 import { FontAwesome, Ionicons } from '@expo/vector-icons'
 
 
 
-export default function RestaurantCard({ item }: { item: RestaurantsProps }) {
+export default function FoodCard({ item }: { item: FoodProps }) {
 
     const width = 140; 
     const height = 100;
