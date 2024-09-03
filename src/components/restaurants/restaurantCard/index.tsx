@@ -7,10 +7,14 @@ import { FontAwesome, Ionicons } from '@expo/vector-icons'
 
 export default function RestaurantCard({ item }: { item: RestaurantsProps }) {
 
-    const width = 140;
+    const width = 140; 
     const height = 100;
 
-    const Logo =  ''
+    // This line works
+    const Logo = Image.resolveAssetSource(require(`@/src/assets/restaurants/kfc.png`)).uri
+
+    // But when I put the image name as the name obtained by json, it doesnt work.
+    // const Logo = Image.resolveAssetSource(require(`@/src/assets/restaurants/${item.image}`)).uri
 
     return (
         <Pressable style={{

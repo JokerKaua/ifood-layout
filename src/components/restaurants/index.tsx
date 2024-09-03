@@ -1,6 +1,5 @@
-import { Ionicons } from '@expo/vector-icons';
 import { useEffect, useState } from 'react'
-import { View, Text, FlatList, ScrollView, StyleSheet, SectionList } from 'react-native'
+import { View, FlatList } from 'react-native'
 import RestaurantCard from './restaurantCard';
 
 import * as restaurantesJson from '@/db.json'
@@ -30,14 +29,13 @@ export function Restaurants({ urlFetch }: { urlFetch: string }) {
         async function getRestaurantsJson() {
             // console.log(data);
             setRestaurants(restaurantesJson.restaurants); 
+
             console.log(restaurants);
             
         }
 
         getRestaurantsJson()
     }, []);
-
-
 
     return (
         <View>

@@ -4,12 +4,12 @@
   - [Sobre](#sobre)
   - [Tecnologias](#tecnologias)
   - [Instalação e execução](#instalação-e-execução)
-  - [Desenvolvimento](#desenvolvimento)
+  - [Desenvolvimento / Detalhes](#desenvolvimento--detalhes)
 
-<br><br>
+<br>
 
 ```bash
-git clone https://github.com/JokerKaua/aula-react-native.git
+git clone https://github.com/JokerKaua/ifood-layout.git
 ```
 
 ## Sobre
@@ -44,39 +44,24 @@ npm install
 npx expo start
 ```
 
+- Rodar json-server
+```bash
+npx json-server db.json
+```
 
-## Desenvolvimento 
 
-- App
-  - [x] Estrutura de arquivos
-    > Organização dos arquivos e códigos <br>
-  - [x] Dependências
-    > Pode aumentar
-- Expo router 
-    > precisa instalar e configurar pastas e estrutura do app <br>
-  - [ ] _layout
-    - [x] Parcialmente
-  - [ ] Tabs
-    - [x] Parcialmente
-  - [ ] Screens
-  - [ ] Header
-  - [ ] Stack
-- Components
-  - [ ] Card
-  - [x] Search
-  - [ ] Header
-    > Será feito dinamicamente (expo router)
-  - [ ] Sections (Dinamicas)
-- Assets
-  - [ ] Imagens
-    - [x] Banners 
-  - [x] Ícones
-    > Utilizando o expo-vector-icons<br>
-    > [Link para pesquisa de ícones](https://icons.expo.fyi/Index) 
-  - [x] Fontes
-- 
+## Desenvolvimento / Detalhes
+
+- Funcionamento:
+  - É feito pensando em uma futura ligação com algum banco de dados. Por isso o uso da biblioteca json-server, que simula um servidor db em json, permitindo requisições, mesmo que em localhost.
+  - 
+
+- Problemas:
+  - Em off, com caminho de imagens locais no db.json, as imagens não são carregadas dinamicamente. [Stackoverflow ask](https://stackoverflow.com/questions/78942507/dynamically-load-image-by-name-react-native).
+  - Componente Restaurants não é carregado verticalmente em duas colunas. (Solução temporária para carregá-lo horizontalmente)
+  - Na TabBar, após um margin/padding, o background fica branco, independente do que eu faça. Possível solução: criar TabBar manualmente. [Ajuda](https://www.youtube.com/watch?v=K6OJP0s5VDQ). 
 
 
 <br><br><br><br>
-> Autor: *Kauã Felipe Martins* <br>
+>> Autor: *Kauã Felipe Martins / Leonardo Madeira* <br>
     
