@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { View, FlatList } from 'react-native'
 import RestaurantCard from './restaurantCard';
 
-import * as restaurantesJson from '@/db.json'
+import * as restaurantesJson from '@/db-pathImages.json'
 
 export interface RestaurantsProps {
     id: string;
@@ -22,16 +22,15 @@ export function Restaurants({ urlFetch }: { urlFetch: string }) {
         */
        
        //Pegar restaurantes do db.json, simulando uma API
-       async function getRestaurants() {
-            const response = await fetch(urlFetch);
-            const data = await response.json();
-            // console.log(data);
-            setRestaurants(data);    
-        }
-        getRestaurants();
+    //    async function getRestaurants() {
+    //         const response = await fetch(urlFetch);
+    //         const data = await response.json();
+    //         // console.log(data);
+    //         setRestaurants(data);    
+    //     }
+    //     getRestaurants();
 
         async function getRestaurantsJson() {
-            // console.log(data);
             setRestaurants(restaurantesJson.restaurants); 
             console.log(restaurants);
         }

@@ -35,32 +35,32 @@
     {
       "id": "1",
       "name": "KFC",
-      "image": "kfc.png"
+      "image": "kfc"
     },
     {
       "id": "2",
       "name": "McDonald's",
-      "image": "kfc.png"
+      "image": "mcdonalds"
     },
     {
       "id": "3",
       "name": "Outback",
-      "image": "kfc.png"
+      "image": "outback"
     },
     {
       "id": "4",
       "name": "Sushi Dev",
-      "image": "kfc.png"
+      "image": "sushidev"
     },
     {
       "id": "5",
       "name": "Burguer Grill",
-      "image": "kfc.png"
+      "image": "burguergrill"
     },
     {
       "id": "6",
       "name": "Marmitas express",
-      "image": "kfc.png"
+      "image": "marmitasexpress"
     }
   ],
   "foods": [

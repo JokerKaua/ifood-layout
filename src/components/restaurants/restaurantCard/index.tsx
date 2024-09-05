@@ -3,18 +3,15 @@ import { View, Text, Pressable, Image } from 'react-native'
 import { RestaurantsProps } from '..'
 import { FontAwesome, Ionicons } from '@expo/vector-icons'
 
-
+import { images } from '@/src/assets/restaurants/images'
 
 export default function RestaurantCard({ item }: { item: RestaurantsProps }) {
 
     const width = 140; 
     const height = 100;
 
-    // This line works
-    const Logo = Image.resolveAssetSource(require(`@/src/assets/restaurants/kfc.png`)).uri
-
-    // But when I put the image name as the name obtained by json, it doesnt work.
-    // const Logo = Image.resolveAssetSource(require(`@/src/assets/restaurants/${item.image}`)).uri
+    let Logo = Image.resolveAssetSource(images[item.image])
+    // console.log(Logo);
 
     return (
         <Pressable style={{
@@ -39,7 +36,7 @@ export default function RestaurantCard({ item }: { item: RestaurantsProps }) {
                  * 
                  * Caso queria testar o json-server, vá no componente Restaurant e comente o código da função getRestaurantsJson() e deixe apenas a função getRestaurants().
                  */}
-                <Image source={{uri: item.image}} style={{
+                <Image source={Logo} onError={() => {/** não, isso não é uma boa solução, mas assim se o nome da imagem no db.json estiver errada, funciona*/}} style={{
                     width: width,
                     height: height,
                     resizeMode: 'stretch',
